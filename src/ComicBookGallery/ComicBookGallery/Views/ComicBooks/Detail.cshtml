@@ -26,6 +26,20 @@
         <div>
             @Html.Raw(description)
         </div>
+
+        @if (artists.Length == 0)
+        {
+            <h3>No artists found!</h3>
+        }
+        else
+        {
+            <h5>Artists: </h5>
+            foreach (var artist in artists)
+            {
+                <li>* @artist</li>
+            }
+        }
+
     </div>
 </body>
 </html>
